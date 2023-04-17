@@ -11,7 +11,10 @@ export async function proceduresRoutes(app: FastifyInstance) {
     const { id } = getProcedureParamsSchema.parse(request.params) // validação do parametro
 
     const procedures = await knex('PSC_V_API_PROCEDIMENTO')
-      .select('*')
+      .select(
+        'CD_PROCEDIMENTO',
+        'PROCEDIMENTO'
+      )
       .whereLike('CD_PROCEDIMENTO', '%' + id + '%')
       .orderBy('CD_PROCEDIMENTO')
   
