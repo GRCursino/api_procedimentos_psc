@@ -18,7 +18,7 @@ app.register(proceduresRoutes)
 app.listen({
   port: env.APPLICATION_PORT
 }).then(() => {
-  console.log('Node server running!')
+  console.log('🚀 API Procedimentos, Node server running!')
 })
 
 
