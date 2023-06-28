@@ -8,7 +8,8 @@ import { proceduresRoutes } from './routes/procedures';
 const app = fastify();
 
 app.register(cors, {
-  origin: '*',
+  origin: true,
+  //origin: ['172.16.200.189'],
   methods: ['GET'],
   credentials: false
 });
